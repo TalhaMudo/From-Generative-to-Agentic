@@ -343,9 +343,9 @@ function seedSessionsFromPoster() {
         en: "Panel (Session 2): Native AI and Agentic Workflow Standards",
       },
       speakers: [
-        { name: "Altan Çakır", profileUrl: "" },
-        { name: "Barış Karakullukçu", profileUrl: "" },
-        { name: "Alper Öner", profileUrl: "" },
+        { name: "Altan Çakır", profileUrl: "https://www.linkedin.com/in/altan-cakir-11446446/" },
+        { name: "Barış Karakullukçu", profileUrl: "https://www.linkedin.com/in/bar%C4%B1%C5%9F-karakulluk%C3%A7u-560446127/" },
+        { name: "Alper Öner", profileUrl: "https://www.linkedin.com/in/alperoner/" },
       ],
       logos: [
         { fallbackText: "AIONLINE", imageSrc: "./assets/logos/aionline.svg", alt: "AIONLINE logo" },
