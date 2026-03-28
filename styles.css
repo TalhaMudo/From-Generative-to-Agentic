@@ -1,13 +1,13 @@
 :root {
   color-scheme: dark;
-  --bg: #070719;
-  --surface: #10132a;
-  --surface-border: #2b2f4e;
-  --text-main: #f4f6ff;
-  --text-muted: #b7bddf;
-  --accent: #7989ff;
-  --ongoing: #0ea5a7;
-  --upcoming: #2563eb;
+  --bg: #050625;
+  --surface: #0b1140;
+  --surface-border: #353a78;
+  --text-main: #f8f8ff;
+  --text-muted: #c3c6ec;
+  --accent: #b39cff;
+  --ongoing: #9b7cff;
+  --upcoming: #6ea6ff;
   --completed: #6b7280;
 }
 
@@ -20,8 +20,13 @@
 body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #11205c 0%, var(--bg) 45%);
+  background:
+    radial-gradient(1200px 700px at 78% 66%, rgba(132, 66, 255, 0.36), transparent 48%),
+    radial-gradient(900px 540px at 24% 78%, rgba(88, 52, 201, 0.34), transparent 52%),
+    radial-gradient(1000px 600px at 50% -12%, rgba(32, 68, 184, 0.58), transparent 56%),
+    linear-gradient(180deg, #060a45 0%, var(--bg) 44%, #060720 100%);
   color: var(--text-main);
+  min-height: 100vh;
 }
 
 .container {
@@ -32,11 +37,12 @@ body {
 
 .hero,
 .card {
-  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
   border: 1px solid var(--surface-border);
   border-radius: 14px;
   padding: 1rem;
   backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(4, 8, 34, 0.4);
 }
 
 .hero {
@@ -64,7 +70,7 @@ h2 {
 .lang-toggle {
   border: 1px solid var(--surface-border);
   border-radius: 8px;
-  background: #1e2447;
+  background: #1a2060;
   color: var(--text-main);
   cursor: pointer;
   padding: 0.45rem 0.65rem;
@@ -91,7 +97,7 @@ h2 {
   border-radius: 10px;
   border: 1px solid var(--surface-border);
   padding: 0.75rem;
-  background: #151a34;
+  background: #101747;
 }
 
 .session-title {
@@ -118,8 +124,8 @@ h2 {
   align-items: center;
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
-  background: #222953;
-  border: 1px solid #353d72;
+  background: #1d2362;
+  border: 1px solid #4953a1;
   color: var(--text-main);
   text-decoration: none;
   font-size: 0.84rem;
@@ -141,12 +147,13 @@ h2 {
   border: 1px solid var(--surface-border);
   border-radius: 10px;
   padding: 0.65rem 0.75rem;
-  background: #121733;
+  background: #0f1542;
 }
 
 .timeline-item.is-ongoing {
   border-color: var(--ongoing);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ongoing) 45%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ongoing) 40%, transparent),
+    0 0 24px color-mix(in srgb, var(--ongoing) 20%, transparent);
 }
 
 .timeline-item.is-upcoming {
@@ -199,7 +206,7 @@ h2 {
 
 .logo {
   border-radius: 6px;
-  border: 1px solid #3c436f;
+  border: 1px solid #4c5696;
   background: #ffffff;
   color: #0f172a;
   padding: 0.15rem 0.45rem;

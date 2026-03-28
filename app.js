@@ -11,19 +11,19 @@ const EVENT = {
 const UI_TEXT = {
   tr: {
     locale: "tr-TR",
-    currentTitle: "Su anki oturum",
-    timelineTitle: "Gunluk akis",
+    currentTitle: "Şu anki oturum",
+    timelineTitle: "Günlük akış",
     posterTitle: "Orijinal etkinlik posteri",
     noCurrent: "Bu saatte aktif oturum yok.",
-    eventStartsSoon: "Etkinlik henuz baslamadi.",
-    eventEnded: "Etkinlik tamamlandi.",
+    eventStartsSoon: "Etkinlik henüz başlamadı.",
+    eventEnded: "Etkinlik tamamlandı.",
     statuses: {
-      ongoing: "Su anda",
-      upcoming: "Siradaki",
-      completed: "Tamamlandi",
+      ongoing: "Şu anda",
+      upcoming: "Sıradaki",
+      completed: "Tamamlandı",
     },
     details: "Detaylar",
-    noSpeakers: "Konusmaci bilgisi yok",
+    noSpeakers: "Konuşmacı bilgisi yok",
     withLink: "Profil",
   },
   en: {
@@ -156,7 +156,6 @@ function setStaticLabels(text) {
   document.getElementById("event-title").textContent = EVENT.title[currentLang];
   document.getElementById("current-session-heading").textContent = text.currentTitle;
   document.getElementById("timeline-heading").textContent = text.timelineTitle;
-  document.getElementById("poster-heading").textContent = text.posterTitle;
   document.getElementById("event-date").textContent = formatEventDate(EVENT.dateISO, text.locale);
 }
 
@@ -301,7 +300,7 @@ function seedSessionsFromPoster() {
       id: "welcome",
       start: "14:30",
       end: "15:00",
-      title: { tr: "Karsilama", en: "Welcome" },
+      title: { tr: "Karşılama", en: "Welcome" },
       speakers: [],
       logos: [],
     },
@@ -310,10 +309,10 @@ function seedSessionsFromPoster() {
       start: "15:00",
       end: "15:15",
       title: {
-        tr: 'Acilis Konusmasi: "Neden Agentic Native?"',
+        tr: 'Açılış Konuşması: "Neden Agentic Native?"',
         en: 'Opening Speech: "Why Agentic Native?"',
       },
-      speakers: [{ name: "Kulup Baskani / Yonetim Kurulu", profileUrl: "" }],
+      speakers: [{ name: "Kulüp Başkanı / Yönetim Kurulu", profileUrl: "" }],
       logos: [],
     },
     {
@@ -321,7 +320,7 @@ function seedSessionsFromPoster() {
       start: "15:15",
       end: "15:45",
       title: {
-        tr: "Keynote-1 (1. Oturum): Insan, Kultur ve Yapay Zeka Sosyolojisi",
+        tr: "Keynote-1 (1. Oturum): İnsan, Kültür ve Yapay Zeka Sosyolojisi",
         en: "Keynote-1 (Session 1): Human, Culture and AI Sociology",
       },
       speakers: [{ name: "Levent Erden", profileUrl: "" }],
@@ -331,7 +330,7 @@ function seedSessionsFromPoster() {
       id: "break-1",
       start: "15:45",
       end: "15:55",
-      title: { tr: "Atistirmalik & Networking Molasi", en: "Snacks & Networking Break" },
+      title: { tr: "Atıştırmalık & Networking Molası", en: "Snacks & Networking Break" },
       speakers: [],
       logos: [],
     },
@@ -340,13 +339,13 @@ function seedSessionsFromPoster() {
       start: "15:55",
       end: "16:35",
       title: {
-        tr: "Panel (2. Oturum): Native AI ve Agentic Workflow Standartlari",
+        tr: "Panel (2. Oturum): Native AI ve Agentic Workflow Standartları",
         en: "Panel (Session 2): Native AI and Agentic Workflow Standards",
       },
       speakers: [
-        { name: "Altan Cakir", profileUrl: "" },
-        { name: "Baris Karakullukcu", profileUrl: "" },
-        { name: "Alper Oner", profileUrl: "" },
+        { name: "Altan Çakır", profileUrl: "" },
+        { name: "Barış Karakullukçu", profileUrl: "" },
+        { name: "Alper Öner", profileUrl: "" },
       ],
       logos: [
         { fallbackText: "AIONLINE", imageSrc: "./assets/logos/aionline.svg", alt: "AIONLINE logo" },
@@ -367,17 +366,17 @@ function seedSessionsFromPoster() {
       start: "17:20",
       end: "17:45",
       title: {
-        tr: "Keynote-2 (3. Oturum): Agentic AI ve Gelecek Vizyonu: Uretkenlikten Otonom Karar Mekanizmalarina",
+        tr: "Keynote-2 (3. Oturum): Agentic AI ve Gelecek Vizyonu: Üretkenlikten Otonom Karar Mekanizmalarına",
         en: "Keynote-2 (Session 3): Agentic AI and Future Vision: From Productivity to Autonomous Decision Mechanisms",
       },
-      speakers: [{ name: "Serhan Yilmaz", profileUrl: "" }],
+      speakers: [{ name: "Serhan Yılmaz", profileUrl: "" }],
       logos: [{ fallbackText: "SPONSOR", imageSrc: "./assets/logos/sponsor.svg", alt: "Sponsor logo" }],
     },
     {
       id: "break-2",
       start: "17:45",
       end: "17:55",
-      title: { tr: "Atistirmalik & Networking Molasi", en: "Snacks & Networking Break" },
+      title: { tr: "Atıştırmalık & Networking Molası", en: "Snacks & Networking Break" },
       speakers: [],
       logos: [],
     },
@@ -386,17 +385,17 @@ function seedSessionsFromPoster() {
       start: "17:55",
       end: "18:20",
       title: {
-        tr: "4. Oturum: Agentic Cagda Verinin Demokratiklesmesi",
+        tr: "4. Oturum: Agentic Çağda Verinin Demokratikleşmesi",
         en: "Session 4: Democratization of Data in the Agentic Era",
       },
-      speakers: [{ name: "Metin Sarikaya", profileUrl: "" }],
+      speakers: [{ name: "Metin Sarıkaya", profileUrl: "" }],
       logos: [{ fallbackText: "AKBANK", imageSrc: "./assets/logos/akbank.svg", alt: "Akbank logo" }],
     },
     {
       id: "closing",
       start: "18:20",
       end: "18:30",
-      title: { tr: "Kapanis + Duyurular", en: "Closing + Announcements" },
+      title: { tr: "Kapanış + Duyurular", en: "Closing + Announcements" },
       speakers: [],
       logos: [],
     },
