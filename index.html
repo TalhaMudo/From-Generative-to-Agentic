@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From Generative to Agentic - Event Timeline</title>
+    <meta
+      name="description"
+      content="From Generative to Agentic etkinlik akisini canli takip edin."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div class="hero-top">
+          <h1 id="event-title">FROM GENERATIVE TO AGENTIC</h1>
+          <button id="lang-toggle" class="lang-toggle" aria-live="polite">
+            TR / EN
+          </button>
+        </div>
+        <p id="event-date" class="event-date"></p>
+        <p id="status-message" class="status-message"></p>
+      </header>
+
+      <section class="card current-card" aria-labelledby="current-session-heading">
+        <h2 id="current-session-heading"></h2>
+        <div id="current-session" class="current-session"></div>
+      </section>
+
+      <section class="card timeline-card" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading"></h2>
+        <ul id="timeline-list" class="timeline-list"></ul>
+      </section>
+
+      <section class="card poster-card" aria-labelledby="poster-heading">
+        <h2 id="poster-heading"></h2>
+        <img
+          src="./assets/event-poster.png"
+          alt="From Generative to Agentic etkinlik posteri"
+          class="poster-image"
+        />
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
