@@ -135,16 +135,22 @@ function createSpeakerChip(speaker, text, withLinks = true) {
 function createLogoElement(logo) {
   const wrapper = document.createElement("span");
   wrapper.className = "logo";
+  const fallbackText = logo?.fallbackText || "Logo";
 
   if (logo?.imageSrc) {
     const img = document.createElement("img");
     img.src = logo.imageSrc;
-    img.alt = logo.alt || logo.fallbackText || "Logo";
+    img.alt = logo.alt || fallbackText;
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener("error", () => {
+      wrapper.textContent = fallbackText;
+    });
     wrapper.appendChild(img);
     return wrapper;
   }
 
-  wrapper.textContent = logo?.fallbackText || "Logo";
+  wrapper.textContent = fallbackText;
   return wrapper;
 }
 
@@ -323,8 +329,8 @@ function seedSessionsFromPoster() {
         tr: "Keynote-1 (1. Oturum): İnsan, Kültür ve Yapay Zeka Sosyolojisi",
         en: "Keynote-1 (Session 1): Human, Culture and AI Sociology",
       },
-      speakers: [{ name: "Levent Erden", profileUrl: "" }],
-      logos: [{ fallbackText: "NEXT", imageSrc: "./assets/logos/next.svg", alt: "NEXT logo" }],
+      speakers: [{ name: "Levent Erden", profileUrl: "https://www.linkedin.com/in/levent-erden-791780258/" }],
+      logos: [{ fallbackText: "NEXT", imageSrc: "./logolar/next.jpg", alt: "NEXT logo" }],
     },
     {
       id: "break-1",
@@ -344,13 +350,13 @@ function seedSessionsFromPoster() {
       },
       speakers: [
         { name: "Altan Çakır", profileUrl: "https://www.linkedin.com/in/altan-cakir-11446446/" },
-        { name: "Barış Karakullukçu", profileUrl: "https://www.linkedin.com/in/bar%C4%B1%C5%9F-karakulluk%C3%A7u-560446127/" },
-        { name: "Alper Öner", profileUrl: "https://www.linkedin.com/in/alperoner/" },
+        { name: "Barış Karakullukçu", profileUrl: "https://www.linkedin.com/in/baris-karakullukcu/" },
+        { name: "Alper Öner", profileUrl: "https://www.linkedin.com/in/alper-oner-phd-70430427/" },
       ],
       logos: [
-        { fallbackText: "AIONLINE", imageSrc: "./assets/logos/aionline.svg", alt: "AIONLINE logo" },
-        { fallbackText: "beko", imageSrc: "./assets/logos/beko.svg", alt: "Beko logo" },
-        { fallbackText: "P2", imageSrc: "./assets/logos/p2.svg", alt: "Partner logo" },
+        { fallbackText: "AIONLINE", imageSrc: "./logolar/AIONIRE.png", alt: "AIONLINE logo" },
+        { fallbackText: "beko", imageSrc: "./logolar/beko.png", alt: "Beko logo" },
+        { fallbackText: "P2", imageSrc: "./logolar/parton.svg", alt: "Partner logo" },
       ],
     },
     {
@@ -369,8 +375,8 @@ function seedSessionsFromPoster() {
         tr: "Keynote-2 (3. Oturum): Agentic AI ve Gelecek Vizyonu: Üretkenlikten Otonom Karar Mekanizmalarına",
         en: "Keynote-2 (Session 3): Agentic AI and Future Vision: From Productivity to Autonomous Decision Mechanisms",
       },
-      speakers: [{ name: "Serhan Yılmaz", profileUrl: "" }],
-      logos: [{ fallbackText: "SPONSOR", imageSrc: "./assets/logos/sponsor.svg", alt: "Sponsor logo" }],
+      speakers: [{ name: "Serhan Yılmaz", profileUrl: "https://www.linkedin.com/in/dr-serhan-yilmaz-6a8a864b/" }],
+      logos: [{ fallbackText: "SPONSOR", imageSrc: "./logolar/dogus.jpg", alt: "Sponsor logo" }],
     },
     {
       id: "break-2",
@@ -388,8 +394,8 @@ function seedSessionsFromPoster() {
         tr: "4. Oturum: Agentic Çağda Verinin Demokratikleşmesi",
         en: "Session 4: Democratization of Data in the Agentic Era",
       },
-      speakers: [{ name: "Metin Sarıkaya", profileUrl: "" }],
-      logos: [{ fallbackText: "AKBANK", imageSrc: "./assets/logos/akbank.svg", alt: "Akbank logo" }],
+      speakers: [{ name: "Metin Sarıkaya", profileUrl: "https://www.linkedin.com/in/metinsarikaya/?locale=tr" }],
+      logos: [{ fallbackText: "AKBANK", imageSrc: "./logolar/ak.jpg", alt: "Akbank logo" }],
     },
     {
       id: "closing",

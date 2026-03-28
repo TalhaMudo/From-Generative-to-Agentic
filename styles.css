@@ -200,28 +200,34 @@ h2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.48rem;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
 }
 
 .logo {
-  border-radius: 6px;
-  border: 1px solid #4c5696;
-  background: #ffffff;
-  color: #0f172a;
-  padding: 0.15rem 0.45rem;
+  border-radius: 8px;
+  border: 1px solid #5e68af;
+  background: linear-gradient(180deg, #171f5a 0%, #0f1542 100%);
+  color: #eef2ff;
+  padding: 0.3rem 0.58rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  min-height: 24px;
+  min-height: 34px;
+  min-width: 54px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .logo img {
   display: block;
-  max-height: 24px;
-  max-width: 88px;
+  max-height: 28px;
+  max-width: 112px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.28));
 }
 
 .poster-image {
