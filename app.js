@@ -305,9 +305,17 @@ function seedSessionsFromPoster() {
     {
       id: "welcome",
       start: "14:30",
-      end: "15:00",
+      end: "14:45",
       title: { tr: "Karşılama", en: "Welcome" },
       speakers: [],
+      logos: [],
+    },
+    {
+      id: "rector-speech",
+      start: "14:45",
+      end: "15:00",
+      title: { tr: "Rektör Konuşması", en: "Rector's Speech" },
+      speakers: [{ name: "Hasan Mandal", profileUrl: "" }],
       logos: [],
     },
     {
